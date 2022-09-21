@@ -6,18 +6,19 @@ def saveCustomer():
     customer_list.append(new_customer) #Add the customer to the list
     print("The customer " + new_customer + " is saved at the position " +
           str(customer_list.index(new_customer))) #Show message if the save was successful
+    answer = input("Do you want to save more customers? (y/n) ") 
+    if answer == "y":
+        saveCustomer()
+
 
 
 def show_customers(customer_list): #Function that shows the list of customers in order they were created
-    for i in range(customer_list): 
-        print(customer_list[i])
+    for i in range(len(customer_list)): 
+        print("The customer number " + str(i) + " is : " + customer_list[i])
 
 
 def run():
     saveCustomer()
-    answer = input("Do you want to save more customers? (y/n) ") 
-    while answer == "y":
-        saveCustomer()
     answer2 = input("Do you want to see all the customers? (y/n) ")
     if answer2 == "y":
         show_customers(customer_list)
