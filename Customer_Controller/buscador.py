@@ -8,14 +8,14 @@ def saveCustomer():
           str(customer_list.index(new_customer))) #Show message if the save was successful
 
 
-def show_customers(customer_list): #Function that shows the list of customers
-    for i in range(customer_list):
+def show_customers(customer_list): #Function that shows the list of customers in order they were created
+    for i in range(customer_list): 
         print(customer_list[i])
 
 
 def run():
     saveCustomer()
-    answer = input("Do you want to save more customers? (y/n) ")
+    answer = input("Do you want to save more customers? (y/n) ") 
     while answer == "y":
         saveCustomer()
     answer2 = input("Do you want to see all the customers? (y/n) ")
