@@ -1,17 +1,16 @@
-client_list = []
-def saveCustomer():
+client_list = [] #On this list/Array we will save the customers
 
-   
+
+def saveCustomer():
     new_client = input("What's the name of the client? ")
     client_list.append(new_client)
-    print("The client " + new_client + " is saved at the position " + str(client_list.index(new_client)))
-  
-        
+    print("The client " + new_client + " is saved at the position " +
+          str(client_list.index(new_client)))
+
 
 def show_customers(client_list):
     for i in range(client_list):
         print(client_list[i])
-
 
 
 def run():
