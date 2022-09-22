@@ -25,7 +25,7 @@ def print_main_menu():
 
     option = int(input("Choose one and lets calculate the proteins!! (input option 1 - " + str(len(aliments)) + ") : "))
 
-    if option in range(1, len(aliments)):
+    if option in range(1, len(aliments) + 1):
         quantity = (int(input("How many grams of " + aliments[int(option) - 1] + " ??? ")))
         result = calc_proteins(quantity, int(proteins[int(option) - 1]))
         result = round(result,2)
