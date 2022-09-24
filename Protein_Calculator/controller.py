@@ -1,3 +1,8 @@
+
+
+from decimal import Decimal
+
+
 aliments = ("Chicken", "Tuna", "Integral rice", "Pasta", "Quinoa",
             "Oatmeal", "Eggs", "Cooked ham", "Serrano ham", "Omelette", "Bacon")
 proteins = (27, 29, 2.6, 5, 16.5, 14, 14.18, 21, 31, 11, 37)
@@ -29,8 +34,8 @@ def print_main_menu():
 
     if option in range(1, len(aliments) + 1): #we have to sum 1 because the option 1 is the position 0 of the tuple
         quantity = (int(input("How many grams of " + aliments[int(option) - 1] + " ??? "))) 
-        result = calc_proteins(quantity, int(proteins[int(option) - 1])) #we have to substract 1 because the option 1 is the position 0 of the tuple
-         #result = round(result,2)
+        result = calc_proteins(quantity, float(proteins[int(option) - 1])) #we have to substract 1 because the option 1 is the position 0 of the tuple
+        result = Decimal(result).quantize(Decimal('1e-2'))
         print(str(quantity) + " g of " + aliments[int(option) - 1] + " have " + str(result) + " g of proteins")
 
 
