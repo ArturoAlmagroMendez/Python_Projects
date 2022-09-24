@@ -1,6 +1,6 @@
 aliments = ("Chicken", "Tuna", "Integral rice", "Pasta", "Quinoa",
             "Oatmeal", "Eggs", "Cooked ham", "Serrano ham", "Omelette", "Bacon")
-proteins = (27, 29, 2.-6, 5, 16.5, 14, 14.18, 21, 31, 11, 37)
+proteins = (27, 29, 2.6, 5, 16.5, 14, 14.18, 21, 31, 11, 37)
  
 
 
